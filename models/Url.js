@@ -6,5 +6,4 @@ const UrlSchema = new mongoose.Schema({
   clicks: { type: Number, default: 0 }, 
   createdAt: { type: Date, default: Date.now }
 });
-
-module.exports = mongoose.model('Url', UrlSchema);
+export default  mongoose.model('Url', UrlSchema);
