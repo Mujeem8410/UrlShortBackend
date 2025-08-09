@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
 
 // POST /api/shorten - create short URL
-app.post("/api/shorten", async (req, res) => {
+app.post("/shorten", async (req, res) => {
   const { longUrl } = req.body;
   const shortCode = nanoid(6);
 
