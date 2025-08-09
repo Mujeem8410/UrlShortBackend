@@ -27,7 +27,7 @@ app.post("/api/shorten", async (req, res) => {
     const newUrl = new Url({ longUrl, shortCode });
     await newUrl.save();
 
-    const baseUrl = "http://localhost:5000"; 
+    const baseUrl = process.env.BASE_URL; 
     res.json({ shortUrl: `${baseUrl}/${shortCode}` });
   } catch (err) {
     console.error(err);
